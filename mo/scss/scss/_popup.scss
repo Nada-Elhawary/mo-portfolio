@@ -1,0 +1,73 @@
+/*---------------------------------------------------
+              Dora Popup css                    
+---------------------------------------------------*/
+
+.dora-popup .mfp-content {
+  background: $white;
+  width: 500px;
+  margin: 0 auto;
+  @include responsive("smartphone-portrait") {
+    width: 300px;
+  }
+  .mfp-close {
+    background: $white;
+    color: $dark;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  .content {
+    .img img {
+      width: 100%;
+    }
+    .des {
+      padding: 20px 30px 20px;
+      span {
+        color: $primary;
+        font-size: 18px;
+      }
+      h4 {
+        color: $dark;
+        margin-bottom: 10px;
+        font-size: 24px;
+        line-height: 1.3;
+        @include responsive("smartphone-portrait") {
+          font-size: 18px;
+        }
+      }
+      p {
+        margin-top: 20px;
+      }
+      .d-flex {
+        display: flex;
+        @include responsive("smartphone-portrait") {
+          display: block;
+        }
+      }
+      ul {
+        li {
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          @include responsive("smartphone-portrait") {
+            margin-right: 0;
+            margin-bottom: 5px;
+          }
+          a {
+            color: $primary;
+            font-size: 14px;
+          }
+          &::before {
+            content: "";
+            height: 7px;
+            width: 7px;
+            background: $arrowBg;
+            display: block;
+            border-radius: 50%;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

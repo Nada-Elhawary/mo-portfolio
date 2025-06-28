@@ -1,0 +1,43 @@
+// Container from BS
+@mixin make-container($padding-x: $container-padding-x, $width) {
+  width: $width;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Responsive
+@mixin responsive($breakpoint) {
+  @if $breakpoint == smartphone-portrait {
+    @media only screen and (max-width: 575.98px) {
+      @content;
+    }
+  }
+  @if $breakpoint == smartphone-landscape {
+    @media only screen and (max-width: 767.98px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet-small {
+    @media only screen and (max-width: 991.97px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 1199.97px) {
+      @content;
+    }
+  }
+  @if $breakpoint == laptop {
+    @media only screen and (max-width: 1399.98px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 1399.99px) {
+      @content;
+    }
+  }
+}

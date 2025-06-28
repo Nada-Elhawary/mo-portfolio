@@ -1,0 +1,70 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Dora Personal Portfolio Template
+    Template URI: site.com
+    Description: Dora is a one page style personal portfolio template for any professional like developer, designer, freelancer, engineer, specialist, content writer, instructor, photographer, freelancer, politician, or some other expert can demonstrate his bio, portfolio, skill set etc . It is easy to customise, all the layers well organised to make any change easy to do without any problems. Super easy to custom everything in the layouts, you will be free to mixing the elements and components to create your own design with business template. This will be a smart choice for your next projects.
+    Author: CodeeFly 
+    Author URI: https://themeforest.net/user/codeefly/
+    Version: 1.0
+
+--------------------------
+    TABLE OF CONTENTS
+--------------------------
+
+    - Default css 
+    - Bootstrap grid css
+    - Popup css
+    - Custom Cursor css
+    - Preloader css
+    - Common Classes css 
+    - Custom Animation Css
+    - Header css 
+    - Hero css
+    - Support css 
+    - Service css
+    - Experience css 
+    - Work css 
+    - Testimonial css 
+    - Blog css 
+    - Contact css
+    - Footer css
+
+-----------------------------------------------------------------------------------*/
+// Variable
+@import "./scss/variable";
+// Mixins
+@import "./scss/mixin";
+// Common
+@import "./scss/base";
+// Bootstrap Grid
+@import "./scss/bsGrid";
+// Popup
+@import "./scss/popup";
+// Cusor
+@import "./scss/cursor";
+// Preloader
+@import "./scss/preloader";
+// Common Classes
+@import "./scss/common-classes";
+// Custom Animation
+@import "./scss/custom-animation";
+// Header
+@import "./sections/header";
+// Hero
+@import "./sections/hero";
+// Support
+@import "./sections/support";
+// services
+@import "./sections/services";
+// Experience
+@import "./sections/experience";
+// Work
+@import "./sections/work";
+// Testimonial
+@import "./sections/testimonial";
+// Blog
+@import "./sections/blog";
+// Contact
+@import "./sections/contact";
+// Footer
+@import "./sections/footer";

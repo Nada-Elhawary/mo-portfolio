@@ -1,0 +1,39 @@
+/*---------------------------------------------------
+                Dora Preloader css                   
+---------------------------------------------------*/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: $white;
+  background-color: $blogBg;
+  z-index: 999;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    &__percent {
+      font: {
+        size: 75px;
+        weight: 700;
+      }
+      margin-bottom: 20px;
+    }
+    &__preload {
+      display: flex;
+      &__dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $white;
+        margin: 0 10px;
+      }
+    }
+  }
+}

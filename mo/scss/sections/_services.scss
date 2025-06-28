@@ -1,0 +1,91 @@
+/*---------------------------------------------------
+               Dora Service Section css                   
+---------------------------------------------------*/
+
+.service-section {
+  overflow: hidden;
+  .row {
+    flex-wrap: nowrap;
+    @include responsive("tablet-small") {
+      display: block;
+    }
+  }
+  .service-title-container {
+    position: relative;
+    flex: 0 0 25%;
+    max-width: 25%;
+
+    @include responsive("tablet-small") {
+      max-width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .section_title {
+        max-width: 90%;
+      }
+    }
+    @include responsive("smartphone-portrait") {
+      display: block;
+      .section_title {
+        max-width: 100%;
+      }
+      .service-btn-container {
+        padding-top: 20px;
+      }
+    }
+  }
+  .service-btn-container {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include responsive("tablet-small") {
+      padding-top: 0;
+    }
+  }
+  .services-cont {
+    position: relative;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 40px 20px;
+  }
+  .service-item {
+    padding: 35px 25px;
+    background-color: $white;
+    box-shadow: 0 16px 32px 0 rgb(0 0 0 / 4%);
+    text-align: center;
+    .service-item-logo {
+      display: block;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .service-item-logo-cont-1 {
+      background-color: $purple;
+    }
+    .service-item-logo-cont-2 {
+      background-color: $yellow;
+    }
+    .service-item-logo-cont-3 {
+      background-color: $red;
+    }
+    .service-item-logo-cont-4 {
+      background-color: $cyan;
+    }
+    h4 {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 31px;
+      color: $dark;
+      margin: 20px 0 15px;
+      @media only screen and (max-width: 650px) {
+        font-size: 20px;
+        line-height: 1.3;
+      }
+    }
+  }
+}

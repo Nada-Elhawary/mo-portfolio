@@ -1,0 +1,2192 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Dora Personal Portfolio Template
+    Template URI: site.com
+    Description: Dora is a one page style personal portfolio template for any professional like developer, designer, freelancer, engineer, specialist, content writer, instructor, photographer, freelancer, politician, or some other expert can demonstrate his bio, portfolio, skill set etc . It is easy to customise, all the layers well organised to make any change easy to do without any problems. Super easy to custom everything in the layouts, you will be free to mixing the elements and components to create your own design with business template. This will be a smart choice for your next projects.
+    Author: CodeeFly 
+    Author URI: https://themeforest.net/user/codeefly/
+    Version: 1.0
+
+--------------------------
+    TABLE OF CONTENTS
+--------------------------
+
+    - Default css 
+    - Bootstrap grid css
+    - Popup css
+    - Custom Cursor css
+    - Preloader css
+    - Common Classes css 
+    - Custom Animation Css
+    - Header css 
+    - Hero css
+    - Support css 
+    - Service css
+    - Experience css 
+    - Work css 
+    - Testimonial css 
+    - Blog css 
+    - Contact css
+    - Footer css
+
+-----------------------------------------------------------------------------------*/
+/*---------------------------------------------------
+                Dora Default css                   
+---------------------------------------------------*/
+/*--------------------------------------------------------------
+# Others Typography
+--------------------------------------------------------------*/
+p {
+  margin-bottom: 1.3em;
+  line-height: 1.75em;
+}
+
+blockquote {
+  margin: 0 0 1.3em;
+}
+
+address {
+  margin: 0 0 1.3em;
+}
+
+dfn,
+em,
+cite,
+i,
+code,
+kbd,
+tt,
+var {
+  font-size: 1em;
+}
+
+em,
+cite,
+i {
+  font-style: italic;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #646363;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+big {
+  font-size: 125%;
+}
+
+pre {
+  background: #f7f7f7;
+  padding: 20px 30px;
+  margin-bottom: 30px;
+  max-width: 100%;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.929em;
+  overflow: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.dropcap {
+  display: block;
+  float: left;
+  margin: 15px 5px 0 0;
+  font-weight: bold;
+  font-size: 60px;
+  color: #ccc;
+}
+
+.el-text-rotation {
+  white-space: nowrap;
+  position: relative;
+  display: inline-block;
+}
+.el-text-rotation .inner-el {
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  color: #6f6b80;
+  font-size: 16px;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 20px;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 60px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*---------------------------------------------------
+           Dora Bootstrap Grid css                   
+---------------------------------------------------*/
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1350px;
+  }
+}
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--bs-gutter-y));
+  margin-right: calc(-0.5 * var(--bs-gutter-x));
+  margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+.row > * {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+
+/*---------------------------------------------------
+              Dora Popup css                    
+---------------------------------------------------*/
+.dora-popup .mfp-content {
+  background: #ffffff;
+  width: 500px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 575.98px) {
+  .dora-popup .mfp-content {
+    width: 300px;
+  }
+}
+.dora-popup .mfp-content .mfp-close {
+  background: #ffffff;
+  color: #cdcdcd;
+  border-radius: 50%;
+  margin: 10px;
+}
+.dora-popup .mfp-content .content .img img {
+  width: 100%;
+}
+.dora-popup .mfp-content .content .des {
+  padding: 20px 30px 20px;
+}
+.dora-popup .mfp-content .content .des span {
+  color: rgb(21, 163, 168);
+  font-size: 18px;
+}
+.dora-popup .mfp-content .content .des h4 {
+  color: #cdcdcd;
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 1.3;
+}
+@media only screen and (max-width: 575.98px) {
+  .dora-popup .mfp-content .content .des h4 {
+    font-size: 18px;
+  }
+}
+.dora-popup .mfp-content .content .des p {
+  margin-top: 20px;
+}
+.dora-popup .mfp-content .content .des .d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media only screen and (max-width: 575.98px) {
+  .dora-popup .mfp-content .content .des .d-flex {
+    display: block;
+  }
+}
+.dora-popup .mfp-content .content .des ul li {
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 14px;
+}
+@media only screen and (max-width: 575.98px) {
+  .dora-popup .mfp-content .content .des ul li {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+.dora-popup .mfp-content .content .des ul li a {
+  color: rgb(21, 163, 168);
+  font-size: 14px;
+}
+.dora-popup .mfp-content .content .des ul li::before {
+  content: "";
+  height: 7px;
+  width: 7px;
+  background: #ececec;
+  display: block;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/*---------------------------------------------------
+                     Dora Cursor css                   
+---------------------------------------------------*/
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  border-radius: 50%;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  visibility: hidden;
+  margin-left: -12.5px;
+  margin-top: -12.5px;
+  width: 25px;
+  height: 25px;
+  opacity: 0.6;
+  z-index: 999;
+  background-color: rgb(21, 163, 168);
+  -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+    margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+@media only screen and (max-width: 1199.97px) {
+  .cursor {
+    display: none;
+  }
+}
+
+.cursor.cursor-hover {
+  margin-left: -40px;
+  margin-top: -40px;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(21, 163, 168);
+  opacity: 0.3;
+}
+
+/*---------------------------------------------------
+                Dora Preloader css                   
+---------------------------------------------------*/
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  background-color: black;
+  z-index: 999;
+}
+.preloader__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.preloader__container__percent {
+  font-size: 75px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.preloader__container__preload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.preloader__container__preload__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: rgb(21, 163, 168);
+  margin: 0 10px;
+}
+
+/*---------------------------------------------------
+                     Dora Common css                   
+---------------------------------------------------*/
+.slider-arrow {
+  width: 50px;
+  height: 50px;
+  background: #cdcdcd;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.slider-arrow svg {
+  width: 25px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.slider-arrow:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  background: rgb(21, 163, 168);
+}
+.slider-arrow:hover svg {
+  stroke: #ffffff;
+}
+.slider-arrow.active {
+  background: rgb(21, 163, 168);
+}
+.slider-arrow.active svg {
+  stroke: #ffffff;
+}
+
+.section_title p {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.5;
+  color: rgb(21, 163, 168);
+}
+@media only screen and (max-width: 650px) {
+  .section_title p {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}
+.section_title h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.5;
+  text-transform: capitalize;
+  color: #cdcdcd;
+}
+@media only screen and (max-width: 650px) {
+  .section_title h2 {
+    font-size: 24px;
+    line-height: 1.3;
+  }
+}
+.section_title.center {
+  text-align: center;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.justify-content-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 30px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  text-decoration: none;
+  border-radius: 50px;
+}
+.btn:focus {
+  outline: none;
+}
+
+.primary-btn {
+  background-color: rgb(21, 163, 168);
+  border: 2px solid transparent;
+  color: #ffffff;
+}
+.primary-btn:hover {
+  background-color: transparent;
+  border-color: rgb(21, 163, 168);
+  color: rgb(21, 163, 168);
+}
+
+.secondary-btn {
+  border: 2px solid rgb(21, 163, 168);
+  color: rgb(21, 163, 168);
+}
+.secondary-btn:hover {
+  background-color: rgb(21, 163, 168);
+  color: #ffffff;
+}
+
+.works-section,
+.contact-section,
+.feedback-section,
+.service-section {
+  background-color: black;
+  padding: 120px 0 120px 0;
+}
+
+.fill-section,
+.experience-section {
+  /* padding: 65px 0 100px;*/
+}
+
+.hover-this {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/*---------------------------------------------------
+            Dora Custom animation css                   
+---------------------------------------------------*/
+@-webkit-keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes animate {
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+@keyframes animate {
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+@-webkit-keyframes showImg {
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes showImg {
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/*---------------------------------------------------
+            Dora Header css                   
+---------------------------------------------------*/
+.header {
+  width: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media only screen and (max-width: 991.97px) {
+  .header .brand-name-toggle {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.header .brand-name img {
+  width: 60px;
+}
+.header .toggle {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  display: none;
+}
+@media only screen and (max-width: 991.97px) {
+  .header .toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.header .toggle span {
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background: #cdcdcd;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  right: 0;
+}
+.header .toggle span:nth-child(1) {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+  width: 25px;
+}
+.header .toggle span:nth-child(2) {
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  width: 15px;
+}
+.header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 70%;
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+@media only screen and (max-width: 991.97px) {
+  .header nav {
+    display: none;
+  }
+  .header nav .nav-btn {
+    margin-top: 20px;
+  }
+}
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header nav ul li {
+  display: inline-block;
+  margin-left: 30px;
+  padding: 25px 0;
+}
+@media only screen and (max-width: 991.97px) {
+  .header nav ul li {
+    margin-left: 5px;
+    padding: 5px 0;
+    display: block;
+  }
+}
+.header nav ul li.current a {
+  color: rgb(21, 163, 168);
+}
+.header nav ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  display: block;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.header nav ul li a:hover {
+  color: rgb(21, 163, 168);
+}
+.header.fixed {
+  position: fixed;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: black;
+}
+.header.fixed .nav ul li a:hover {
+  color: rgb(21, 163, 168);
+}
+
+header.active {
+  max-height: 100%;
+  background: #ffffff;
+  padding-bottom: 30px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+header.active .toggle span:nth-child(1) {
+  width: 30px;
+  -webkit-transform: translateY(0) rotate(45deg);
+  transform: translateY(0) rotate(45deg);
+  -webkit-transition-delay: 0.125s;
+  transition-delay: 0.125s;
+}
+header.active .toggle span:nth-child(2) {
+  width: 30px;
+  -webkit-transform: translateY(0) rotate(315deg);
+  transform: translateY(0) rotate(315deg);
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+}
+header.active .toggle span:nth-child(3) {
+  -webkit-transform: translateX(60px);
+  transform: translateX(60px);
+}
+
+/*---------------------------------------------------
+               Dora Hero Section css                   
+---------------------------------------------------*/
+.hero-section {
+  background-color: black;
+  position: relative;
+  padding-top: 100px;
+}
+@media only screen and (max-width: 991.97px) {
+  .hero-section {
+    padding-bottom: 100px;
+    padding-top: 120px;
+  }
+}
+.hero-section .hero-text {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin: auto 0;
+}
+@media only screen and (max-width: 991.97px) {
+  .hero-section .hero-text {
+    -webkit-box-flex: 100%;
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 500px;
+  }
+}
+.hero-section .hero-text span {
+  color: #dddddd;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 1.3;
+}
+.hero-section .hero-text h1 {
+  color: #fff;
+  font-size: 110px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 10px 0;
+  margin-top: -20px;
+}
+@media only screen and (max-width: 991.97px) {
+  .hero-section .hero-text h1 {
+    font-size: 60px;
+    margin-top: 0;
+    line-height: 1.2;
+  }
+}
+.hero-section .hero-text h3 {
+  color: #fff;
+  font-size: 90px;
+  font-weight: 100;
+  line-height: 1.2;
+  text-transform: capitalize;
+}
+.hero-section .hero-text p {
+  margin: 20px 0 50px;
+}
+.hero-section .hero-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.hero-section .hero-img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+@media only screen and (max-width: 991.97px) {
+  .hero-section .hero-img {
+    position: absolute;
+    bottom: -7px;
+    right: 0;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .hero-section .hero-img {
+    display: none;
+  }
+}
+.hero-section .hero-img img {
+  width: 100%;
+  height: 100%;
+}
+.hero-section .hero-designation {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 0.9em;
+  margin: -10px -33px 30px;
+  /* opacity: 0; */
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transform: translateX(0.3125rem) rotate(0.002deg);
+  -ms-transform: translateX(0.3125rem) rotate(0.002deg);
+  transform: translateX(0.3125rem) rotate(0.002deg);
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+@media only screen and (max-width: 767px) {
+  .hero-section .hero-designation {
+    display: none;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .hero-section .hero-designation {
+    font-size: 1.25em;
+    margin: 0 -30px 30px;
+  }
+}
+.hero-section .hero-designation > li {
+  display: inline-block;
+  position: relative;
+  color: rgb(21, 163, 168);
+  padding: 20px 30px;
+}
+@media only screen and (max-width: 767px) {
+  .hero-section .hero-designation > li {
+    padding: 20px 30px 0;
+  }
+}
+.hero-section .hero-designation > li:hover {
+  color: cyan;
+}
+.hero-section .hero-designation > li:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: white;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 767px) {
+  .hero-section .hero-designation > li:after {
+    top: 70%;
+  }
+}
+.hero-section .hero-designation > li:last-child::after {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+.hero-section .hero-video-btn {
+  /* opacity: 0; */
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transform: translateX(0.3125rem) rotate(0.002deg);
+  -ms-transform: translateX(0.3125rem) rotate(0.002deg);
+  transform: translateX(0.3125rem) rotate(0.002deg);
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+}
+.hero-section .hero-video-btn i {
+  color: white;
+  width: 75px;
+  height: 75px;
+  border: 2px solid white;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 70px;
+  margin-right: 15px;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+}
+.hero-section .hero-video-btn .video-title {
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+}
+.hero-section .hero-video-btn:hover i,
+.hero-section .hero-video-btn:hover .video-title {
+  color: cyan;
+}
+.hero-section .hero-video-btn:hover i {
+  border-color: cyan;
+}
+.hero-section .hg-background-image {
+  background-position: right top;
+}
+@media only screen and (max-width: 767px) {
+  .hero-section .hg-background-image {
+    background-position: 60% 40%;
+  }
+}
+.hero-section .hg-background {
+  opacity: 0;
+  -webkit-transition: 0.05s ease;
+  transition: 0.05s ease;
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+}
+
+.loading-done .hero-section .hero-subheading {
+  opacity: 1;
+  -webkit-transform: translateX(0) rotate(0.002deg);
+  -ms-transform: translateX(0) rotate(0.002deg);
+  transform: translateX(0) rotate(0.002deg);
+}
+.loading-done .hero-section .hero-title {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.loading-done .hero-section .hero-designation {
+  opacity: 1;
+  -webkit-transform: translateX(0) rotate(0.002deg);
+  -ms-transform: translateX(0) rotate(0.002deg);
+  transform: translateX(0) rotate(0.002deg);
+}
+.loading-done .hero-section .hero-text,
+.loading-done .hero-section .hero-video-btn {
+  opacity: 1;
+  -webkit-transform: translateX(0) rotate(0.002deg);
+  -ms-transform: translateX(0) rotate(0.002deg);
+  transform: translateX(0) rotate(0.002deg);
+}
+
+/*--------------------------------------------------------------
+# Grid Element
+--------------------------------------------------------------*/
+.container-xl {
+  margin: auto;
+  padding: 0 15px;
+  width: 100%;
+}
+@media only screen and (min-width: 1575px) {
+  .container-xl {
+    max-width: 1300px;
+  }
+}
+@media only screen and (min-width: 1300px) and (max-width: 1574px) {
+  .container-xl {
+    max-width: 1200px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .row.item-4 .item:nth-child(4n + 1) {
+    clear: left;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .row.item-3 .item:nth-child(3n + 1) {
+    clear: left;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .row.item-2 .item:nth-child(2n + 1) {
+    clear: left;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .row.item-1 .item:nth-child(n + 1) {
+    clear: left;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .row .item:nth-child(2n + 1) {
+    clear: left;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .row .item:nth-child(n + 1) {
+    clear: left;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .row[class*="item-"] [class*="col-"] {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .item-sm [class*="col-"] {
+    width: 100%;
+  }
+}
+.bg-midnight-express {
+  background: black;
+}
+/*--------------------------------------------------------------
+# Padding Element
+--------------------------------------------------------------*/
+.pd-0 {
+  padding: 0;
+}
+
+.pd-t-0 {
+  padding-top: 0;
+}
+
+.pd-b-0 {
+  padding-bottom: 0;
+}
+
+.pd-l-0 {
+  padding-left: 0;
+}
+
+.pd-r-0 {
+  padding-right: 0;
+}
+
+.pd-t-5 {
+  padding-top: 5px;
+}
+
+.pd-b-5 {
+  padding-bottom: 5px;
+}
+
+.pd-l-5 {
+  padding-left: 5px;
+}
+
+.pd-r-5 {
+  padding-right: 5px;
+}
+
+.pd-t-10 {
+  padding-top: 10px;
+}
+
+.pd-b-10 {
+  padding-bottom: 10px;
+}
+
+.pd-l-10 {
+  padding-left: 10px;
+}
+
+.pd-r-10 {
+  padding-right: 10px;
+}
+
+.pd-t-15 {
+  padding-top: 15px;
+}
+
+.pd-b-15 {
+  padding-bottom: 15px;
+}
+
+.pd-l-15 {
+  padding-left: 15px;
+}
+
+.pd-r-15 {
+  padding-right: 15px;
+}
+
+.pd-t-20 {
+  padding-top: 20px;
+}
+
+.pd-b-20 {
+  padding-bottom: 20px;
+}
+
+.pd-l-20 {
+  padding-left: 20px;
+}
+
+.pd-r-20 {
+  padding-right: 20px;
+}
+
+.pd-t-25 {
+  padding-top: 25px;
+}
+
+.pd-b-25 {
+  padding-bottom: 25px;
+}
+
+.pd-l-25 {
+  padding-left: 25px;
+}
+
+.pd-r-25 {
+  padding-right: 25px;
+}
+
+.pd-t-30 {
+  padding-top: 30px;
+}
+
+.pd-b-30 {
+  padding-bottom: 30px;
+}
+
+.pd-l-30 {
+  padding-left: 30px;
+}
+
+.pd-r-30 {
+  padding-right: 30px;
+}
+
+.pd-t-35 {
+  padding-top: 35px;
+}
+
+.pd-b-35 {
+  padding-bottom: 35px;
+}
+
+.pd-l-35 {
+  padding-left: 35px;
+}
+
+.pd-r-35 {
+  padding-right: 35px;
+}
+
+.pd-t-40 {
+  padding-top: 40px;
+}
+
+.pd-b-40 {
+  padding-bottom: 40px;
+}
+
+.pd-l-40 {
+  padding-left: 40px;
+}
+
+.pd-r-40 {
+  padding-right: 40px;
+}
+
+.pd-t-45 {
+  padding-top: 45px;
+}
+
+.pd-b-45 {
+  padding-bottom: 45px;
+}
+
+.pd-l-45 {
+  padding-left: 45px;
+}
+
+.pd-r-45 {
+  padding-right: 45px;
+}
+
+.pd-t-50 {
+  padding-top: 50px;
+}
+
+.pd-b-50 {
+  padding-bottom: 50px;
+}
+
+.pd-l-50 {
+  padding-left: 50px;
+}
+
+.pd-r-50 {
+  padding-right: 50px;
+}
+
+.pd-t-60 {
+  padding-top: 60px;
+}
+
+.pd-b-60 {
+  padding-bottom: 60px;
+}
+
+.pd-l-60 {
+  padding-left: 60px;
+}
+
+.pd-r-60 {
+  padding-right: 60px;
+}
+
+.pd-t-75 {
+  padding-top: 75px;
+}
+
+.pd-b-75 {
+  padding-bottom: 75px;
+}
+
+.pd-l-75 {
+  padding-left: 75px;
+}
+
+.pd-r-75 {
+  padding-right: 75px;
+}
+
+.pd-t-90 {
+  padding-top: 90px;
+}
+
+.pd-b-90 {
+  padding-bottom: 90px;
+}
+
+.pd-l-90 {
+  padding-left: 90px;
+}
+
+.pd-r-90 {
+  padding-right: 90px;
+}
+
+.pd-t-105 {
+  padding-top: 105px;
+}
+
+.pd-b-105 {
+  padding-bottom: 105px;
+}
+
+.pd-l-105 {
+  padding-left: 105px;
+}
+
+.pd-r-105 {
+  padding-right: 105px;
+}
+
+.pd-t-120 {
+  padding-top: 120px;
+}
+
+.pd-b-120 {
+  padding-bottom: 50px;
+  padding-left: 150px;
+  font-family: "Rubik", sans-serif;
+}
+
+.pd-l-120 {
+  padding-left: 120px;
+}
+
+.pd-r-120 {
+  padding-right: 120px;
+}
+
+.pd-t-135 {
+  padding-top: 135px;
+}
+
+.pd-b-135 {
+  padding-bottom: 135px;
+}
+
+.pd-l-135 {
+  padding-left: 135px;
+}
+
+.pd-r-135 {
+  padding-right: 135px;
+}
+
+.pd-t-150 {
+  padding-top: 150px;
+}
+
+.pd-b-150 {
+  padding-bottom: 150px;
+}
+
+.pd-l-150 {
+  padding-left: 150px;
+}
+
+.pd-r-150 {
+  padding-right: 150px;
+}
+
+.pd-t-165 {
+  padding-top: 165px;
+}
+
+.pd-b-165 {
+  padding-bottom: 165px;
+}
+
+.pd-l-165 {
+  padding-left: 165px;
+}
+
+.pd-r-165 {
+  padding-right: 165px;
+}
+
+.pd-t-180 {
+  padding-top: 180px;
+}
+
+.pd-b-180 {
+  padding-bottom: 180px;
+}
+
+.pd-l-180 {
+  padding-left: 180px;
+}
+
+.pd-r-180 {
+  padding-right: 180px;
+}
+
+.pd-t-195 {
+  padding-top: 195px;
+}
+
+.pd-b-195 {
+  padding-bottom: 195px;
+}
+
+.pd-l-195 {
+  padding-left: 195px;
+}
+
+.pd-r-195 {
+  padding-right: 195px;
+}
+
+.pd-t-205 {
+  padding-top: 205px;
+}
+
+.pd-b-205 {
+  padding-bottom: 205px;
+}
+
+.pd-l-205 {
+  padding-left: 205px;
+}
+
+.pd-r-205 {
+  padding-right: 205px;
+}
+
+.pd-t-220 {
+  padding-top: 220px;
+}
+
+.pd-b-220 {
+  padding-bottom: 220px;
+}
+
+.pd-l-220 {
+  padding-left: 220px;
+}
+
+.pd-r-220 {
+  padding-right: 220px;
+}
+
+.pd-t-235 {
+  padding-top: 55px;
+}
+
+.pd-b-235 {
+  padding-bottom: 235px;
+}
+
+.pd-l-235 {
+  padding-left: 235px;
+}
+
+.pd-r-235 {
+  padding-right: 220px;
+}
+.text-center {
+  text-align: center !important;
+}
+/*--------------------------------------------------------------
+## Counter Elements
+--------------------------------------------------------------*/
+.mfp-close {
+  color: white !important;
+}
+@media only screen and (min-width: 992px) {
+  .hg-promo-numbers > .row > .col-lg-3 .tg-promo-number {
+    position: relative;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .hg-promo-numbers > .row > .col-lg-3 .tg-promo-number {
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hg-promo-numbers > .row > .col-lg-3 .tg-promo-number:after {
+    content: "";
+    background: rgba(255, 255, 255, 0.15);
+    width: 1px;
+    position: absolute;
+    right: -15px;
+    top: 15%;
+    height: 150px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .hg-promo-numbers > .row > .col-lg-3 .tg-promo-number:after {
+    content: "";
+    background: rgba(255, 255, 255, 0.15);
+    height: 1px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    width: 150px;
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .hg-promo-numbers > .row > .col-lg-3:last-of-type .tg-promo-number:after {
+    content: "";
+    background: transparent;
+    width: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 0;
+  }
+}
+
+.tg-promo-number .odometer {
+  font-size: 7.323em;
+  color: white;
+  line-height: 1;
+  font-weight: 600;
+}
+.tg-promo-number .promo-title {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.015em;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/*---------------------------------------------------
+               Dora Service Section css                   
+---------------------------------------------------*/
+.service-section {
+  overflow: hidden;
+  background-color: black;
+}
+.service-section .row {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+@media only screen and (max-width: 991.97px) {
+  .service-section .row {
+    display: block;
+  }
+}
+.service-section .service-title-container {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+@media only screen and (max-width: 991.97px) {
+  .service-section .service-title-container {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .service-section .service-title-container .section_title {
+    max-width: 90%;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .service-section .service-title-container {
+    display: block;
+  }
+  .service-section .service-title-container .section_title {
+    max-width: 100%;
+  }
+  .service-section .service-title-container .service-btn-container {
+    padding-top: 20px;
+  }
+}
+.service-section .service-btn-container {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+@media only screen and (max-width: 991.97px) {
+  .service-section .service-btn-container {
+    padding-top: 0;
+  }
+}
+.service-section .services-cont {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 40px 20px;
+}
+.service-section .service-item {
+  padding: 35px 25px;
+  background-color: black;
+  -webkit-box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+.service-section .service-item .service-item-logo {
+  display: block;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.service-section .service-item .service-item-logo-cont-1 {
+  background-color: #9c19c9;
+}
+.service-section .service-item .service-item-logo-cont-2 {
+  background-color: #ffaf00;
+}
+.service-section .service-item .service-item-logo-cont-3 {
+  background-color: #ff4e6e;
+}
+.service-section .service-item .service-item-logo-cont-4 {
+  background-color: #4ac3ca;
+}
+.service-section .service-item h4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+  color: #cdcdcd;
+  margin: 20px 0 15px;
+}
+@media only screen and (max-width: 650px) {
+  .service-section .service-item h4 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}
+
+/*---------------------------------------------------
+           Dora Experience Section css                   
+---------------------------------------------------*/
+.experience-section {
+  background-color: black;
+  position: relative;
+}
+.experience-section .experience-bg-element img {
+  position: absolute;
+  z-index: 1;
+}
+.experience-section .experience-bg-element img:first-child {
+  left: 20px;
+  top: 0;
+}
+.experience-section .experience-bg-element img:last-child {
+  right: 50px;
+  bottom: 50px;
+}
+.experience-section .experience-items {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media only screen and (max-width: 767.98px) {
+  .experience-section .experience-items {
+    gap: 0;
+  }
+}
+.experience-section .experience-items .experience-item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 48%;
+  flex: 0 0 48%;
+  max-width: 48%;
+}
+@media only screen and (max-width: 767.98px) {
+  .experience-section .experience-items .experience-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.experience-section .experience-items .experience-item .experience-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.experience-section .experience-items .experience-item .experience-info p {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #cdcdcd;
+  opacity: 0;
+  -webkit-animation: showText 0.5s 1s linear forwards;
+  animation: showText 0.5s 1s linear forwards;
+}
+.experience-section .experience-items .experience-item .progress-line {
+  margin-top: 7px;
+  height: 10px;
+  width: 100%;
+  background-color: #cdcdcd;
+  position: relative;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  -webkit-animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  border-radius: 50px;
+}
+.experience-section .experience-items .experience-item .progress-line span {
+  border-radius: 50px;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  background-color: rgb(21, 163, 168);
+}
+.experience-section
+  .experience-items
+  .experience-item
+  .progress-line
+  span.animate {
+  -webkit-animation: animate 1.5s 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
+  animation: animate 1.5s 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+/*---------------------------------------------------
+               Dora Work Section css                   
+---------------------------------------------------*/
+.works-section .works-list-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px 25px;
+  margin: 15px 0 40px;
+  -webkit-transform: all 0.5s ease;
+  transform: all 0.5s ease;
+}
+@media only screen and (max-width: 530px) {
+  .works-section .works-list-ul {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+.works-section .works-list-ul li {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #cdcdcd;
+  cursor: pointer;
+}
+.works-section .works-list-ul li:hover {
+  color: rgb(21, 163, 168);
+}
+.works-section .works-list-ul li.active {
+  color: rgb(21, 163, 168);
+}
+.works-section .works-col {
+  width: 33%;
+  overflow: hidden;
+  float: left;
+}
+@media only screen and (max-width: 991.97px) {
+  .works-section .works-col {
+    width: 49%;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .works-section .works-col {
+    width: 100%;
+  }
+  .works-section .works-col a {
+    margin: 0 auto;
+  }
+}
+.works-section .works-col a {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.works-section .works-col a:hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.works-section .works-col img {
+  display: block;
+  max-width: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/*---------------------------------------------------
+         Dora Testimonial Section css                   
+---------------------------------------------------*/
+.feedback-section {
+  padding: 120px 0 100px;
+}
+.feedback-section .feedback-section-title-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+@media only screen and (max-width: 575.98px) {
+  .feedback-section .feedback-section-title-cont {
+    display: block;
+  }
+  .feedback-section .feedback-section-title-cont .section_title {
+    max-width: 100%;
+  }
+  .feedback-section .feedback-section-title-cont .feedback-btn-cont {
+    padding-top: 20px;
+  }
+}
+.feedback-section .feedback-btn-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+.feedback-section .feedback-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 800px;
+  background: black;
+}
+.feedback-section .feedback-item .feedback-active-img {
+  margin-right: 20px;
+  max-width: 300px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40%;
+  flex: 0 0 40%;
+}
+@media only screen and (max-width: 650px) {
+  .feedback-section .feedback-item .feedback-active-img {
+    display: none;
+  }
+}
+.feedback-section .feedback-item .feedback-active-img img {
+  height: 100%;
+  max-width: 100%;
+}
+.feedback-section .feedback-item .feedback-info-cont {
+  padding: 20px;
+}
+.feedback-section .feedback-item .feedback-info-cont .feedback-txt {
+  padding: 15px 0 40px;
+}
+.feedback-section .feedback-item .feedback-info-cont .feedback-person-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 15px;
+}
+.feedback-section
+  .feedback-item
+  .feedback-info-cont
+  .feedback-person-info
+  .feedback-person-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: none;
+}
+@media only screen and (max-width: 650px) {
+  .feedback-section
+    .feedback-item
+    .feedback-info-cont
+    .feedback-person-info
+    .feedback-person-img {
+    display: block;
+  }
+}
+.feedback-section
+  .feedback-item
+  .feedback-info-cont
+  .feedback-person-info
+  .feedback-person-img
+  img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.feedback-section .feedback-item .feedback-info-cont .feedback-person-info h4 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #cdcdcd;
+}
+@media only screen and (max-width: 650px) {
+  .feedback-section
+    .feedback-item
+    .feedback-info-cont
+    .feedback-person-info
+    h4 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+}
+.feedback-section
+  .feedback-item
+  .feedback-info-cont
+  .feedback-person-info
+  .feedback-star-cont {
+  margin-top: 8px;
+}
+.feedback-section
+  .feedback-item
+  .feedback-info-cont
+  .feedback-person-info
+  .feedback-star-cont
+  ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+}
+.feedback-section
+  .feedback-item
+  .feedback-info-cont
+  .feedback-person-info
+  .feedback-star-cont
+  ul
+  li {
+  width: 20px;
+  height: 20px;
+}
+.feedback-section
+  .feedback-item
+  .feedback-info-cont
+  .feedback-person-info
+  .feedback-star-cont
+  ul
+  li
+  img {
+  width: 100%;
+  height: 100%;
+}
+.feedback-section .feedback-item .feedback-title-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.feedback-section .feedback-item .feedback-title-cont .feedback-title-element {
+  width: 30px;
+  height: 50px;
+}
+.feedback-section
+  .feedback-item
+  .feedback-title-cont
+  .feedback-title-element
+  img {
+  max-width: 100%;
+}
+.feedback-section .feedback-item .feedback-title-cont h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+  color: #cdcdcd;
+}
+@media only screen and (max-width: 650px) {
+  .feedback-section .feedback-item .feedback-title-cont h3 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+}
+
+/*---------------------------------------------------
+               Dora Blog Section css                   
+---------------------------------------------------*/
+.blog-section {
+  background-color: black;
+}
+.blog-section h2 {
+  color: #ffffff;
+}
+.blog-section .blog-items {
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media only screen and (max-width: 1199.97px) {
+  .blog-section .blog-items {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+.blog-section .blog-items .blog-item {
+  position: relative;
+  width: 33.33%;
+  padding: 0 15px;
+}
+@media only screen and (max-width: 1199.97px) {
+  .blog-section .blog-items .blog-item {
+    width: 50%;
+    margin: 0 0 50px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .blog-section .blog-items .blog-item {
+    width: 100%;
+    margin: 0 0 50px;
+    padding-left: 25px;
+  }
+}
+.blog-section .blog-items .blog-item .blog-date-cont {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 15px;
+  padding: 10px;
+  background-color: #1f1d2b;
+}
+.blog-section .blog-items .blog-item .blog-date-cont p {
+  font-size: 18px;
+  line-height: 1.3;
+  color: #ffffff;
+}
+.blog-section .blog-items .blog-item .blog-item-img {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+.blog-section .blog-items .blog-item .blog-item-img img {
+  width: 100%;
+  display: block;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.blog-section .blog-items .blog-item .blog-info a.category {
+  padding: 10px 0 5px;
+  font-size: 18px;
+  display: inline-block;
+  color: rgb(21, 163, 168);
+}
+.blog-section .blog-items .blog-item .blog-info h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #ffffff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.blog-section .blog-items .blog-item:hover .blog-item-img {
+  display: block;
+}
+.blog-section .blog-items .blog-item:hover .blog-item-img img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+/*---------------------------------------------------
+               Dora Contact Section css                   
+---------------------------------------------------*/
+.contact-section {
+  padding: 120px 0 20px 0;
+}
+.contact-section .contact-info-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 130px;
+}
+@media only screen and (max-width: 767.98px) {
+  .contact-section .contact-info-cont {
+    display: block;
+  }
+}
+@media only screen and (max-width: 991.97px) {
+  .contact-section .contact-info-cont {
+    gap: 30px;
+  }
+}
+.contact-section .contact-info {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 40%;
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+@media only screen and (max-width: 767.98px) {
+  .contact-section .contact-info {
+    display: none;
+  }
+}
+.contact-section .contact-info h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  text-transform: capitalize;
+}
+.contact-section .contact-info p {
+  padding: 15px 0 25px;
+}
+.contact-section .contact-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.contact-section .contact-social li a {
+  color: unset;
+}
+.contact-section .contact-social li i {
+  font-size: 18px;
+}
+.contact-section .contact-form {
+  max-width: 100%;
+}
+.contact-section .contact-form h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  color: #cdcdcd;
+}
+.contact-section .contact-form .input-control {
+  margin-top: 25px;
+  padding: 15px 30px;
+  width: 100%;
+  display: block;
+  background-color: black;
+  border: 2px solid rgb(21, 163, 168);
+}
+.contact-section .contact-form .input-control:focus {
+  outline: none;
+  border-color: cyan;
+}
+.contact-section .contact-form textarea {
+  height: 170px;
+  resize: none;
+}
+.contact-section .contact-form .form-btn {
+  margin-top: 30px;
+}
+
+/*---------------------------------------------------
+               Dora footer css                   
+---------------------------------------------------*/
+.copyright {
+  padding: 40px 0;
+  background-color: black;
+  text-align: center;
+}
+.copyright p {
+  color: #fdf8f7;
+}
+.copyright a {
+  color: rgb(21, 163, 168);
+} /*# sourceMappingURL=style.css.map */

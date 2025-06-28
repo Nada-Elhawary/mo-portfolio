@@ -1,0 +1,79 @@
+/*---------------------------------------------------
+               Dora Blog Section css                   
+---------------------------------------------------*/
+
+.blog-section {
+  background-color: $blogBg;
+  h2 {
+    color: $white;
+  }
+  .blog-items {
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    @include responsive("tablet") {
+      flex-wrap: wrap;
+    }
+    .blog-item {
+      position: relative;
+      width: 33.33%;
+      padding: 0 15px;
+      @include responsive("tablet") {
+        width: 50%;
+        margin: 0 0 50px;
+      }
+      @include responsive("smartphone-landscape") {
+        width: 100%;
+        margin: 0 0 50px;
+        padding-left: 25px;
+      }
+      .blog-date-cont {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 15px;
+        padding: 10px;
+        background-color: $blogBg;
+        p {
+          font-size: 18px;
+          line-height: 1.3;
+          color: $white;
+        }
+      }
+      .blog-item-img {
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        img {
+          width: 100%;
+          display: block;
+          transition: all 0.5s ease;
+        }
+      }
+      .blog-info {
+        a.category {
+          padding: 10px 0 5px;
+          font-size: 18px;
+          display: inline-block;
+          color: $primary;
+        }
+        h4 {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 1.5;
+          color: $white;
+          transition: all 0.5s ease;
+          cursor: pointer;
+        }
+      }
+      &:hover {
+        .blog-item-img {
+          display: block;
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}

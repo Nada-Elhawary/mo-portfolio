@@ -1,0 +1,74 @@
+/*---------------------------------------------------
+               Dora Contact Section css                   
+---------------------------------------------------*/
+
+.contact-section {
+  padding: 70px 0;
+  .contact-info-cont {
+    display: flex;
+    gap: 130px;
+    @include responsive("smartphone-landscape") {
+      display: block;
+    }
+    @include responsive("tablet-small") {
+      gap: 30px;
+    }
+  }
+  .contact-info {
+    flex: 0 0 40%;
+    max-width: 40%;
+    @include responsive("smartphone-landscape") {
+      display: none;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 39px;
+      text-transform: capitalize;
+    }
+    p {
+      padding: 15px 0 25px;
+    }
+  }
+  .contact-social {
+    display: flex;
+    gap: 20px;
+    li {
+      a {
+        color: unset;
+      }
+      i {
+        font-size: 18px;
+      }
+    }
+  }
+  .contact-form {
+    max-width: 100%;
+
+    h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 31px;
+      color: $dark;
+    }
+    .input-control {
+      margin-top: 25px;
+      padding: 15px 30px;
+      width: 100%;
+      display: block;
+      background-color: $white;
+      border: 2px solid #eeeeee;
+      &:focus {
+        outline: none;
+        border-color: $primary;
+      }
+    }
+    textarea {
+      height: 170px;
+      resize: none;
+    }
+    .form-btn {
+      margin-top: 30px;
+    }
+  }
+}

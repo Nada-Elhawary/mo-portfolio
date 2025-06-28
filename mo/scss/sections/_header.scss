@@ -1,0 +1,139 @@
+/*---------------------------------------------------
+            Dora Header css                   
+---------------------------------------------------*/
+.header {
+  width: 100%;
+  transition: all 0.5s ease;
+  z-index: 9;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include responsive("tablet-small") {
+    .brand-name-toggle {
+      width: 100%;
+      display: flex;
+    }
+  }
+  .brand-name {
+    img {
+      width: 100px;
+    }
+  }
+
+  .toggle {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    display: none;
+    @include responsive("tablet-small") {
+      display: flex;
+    }
+    span {
+      position: absolute;
+      width: 40px;
+      height: 3px;
+      background: $dark;
+      border-radius: 10px;
+      transition: 0.5s;
+      right: 0;
+      &:nth-child(1) {
+        transform: translateY(-10px);
+        width: 25px;
+      }
+      &:nth-child(2) {
+        transform: translateY(10px);
+        width: 15px;
+      }
+    }
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 70%;
+    max-width: 70%;
+    @include responsive("tablet-small") {
+      display: none;
+      .nav-btn {
+        margin-top: 20px;
+      }
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        margin-left: 30px;
+        padding: 25px 0;
+        @include responsive("tablet-small") {
+          margin-left: 5px;
+          padding: 5px 0;
+          display: block;
+        }
+        &.current {
+          a {
+            color: $primary;
+          }
+        }
+        a {
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 500;
+          color: $dark;
+          display: block;
+          transition: all 0.5s ease;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  &.fixed {
+    position: fixed;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    background: $white;
+    .nav {
+      ul {
+        li {
+          a {
+            &:hover {
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+header.active {
+  max-height: 100%;
+  background: $white;
+  padding-bottom: 30px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  .toggle {
+    span {
+      &:nth-child(1) {
+        width: 30px;
+        transform: translateY(0) rotate(45deg);
+        transition-delay: 0.125s;
+      }
+      &:nth-child(2) {
+        width: 30px;
+        transform: translateY(0) rotate(315deg);
+        transition-delay: 0.25s;
+      }
+      &:nth-child(3) {
+        transform: translateX(60px);
+      }
+    }
+  }
+}

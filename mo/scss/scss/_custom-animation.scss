@@ -1,0 +1,20 @@
+/*---------------------------------------------------
+            Dora Custom animation css                   
+---------------------------------------------------*/
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+@keyframes showImg {
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

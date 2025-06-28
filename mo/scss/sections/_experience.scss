@@ -1,0 +1,77 @@
+/*---------------------------------------------------
+           Dora Experience Section css                   
+---------------------------------------------------*/
+
+.experience-section {
+  background-color: $heroBg;
+  position: relative;
+  .experience-bg-element {
+    img {
+      position: absolute;
+      z-index: 1;
+      &:first-child {
+        left: 20px;
+        top: 0;
+      }
+      &:last-child {
+        right: 50px;
+        bottom: 50px;
+      }
+    }
+  }
+  .experience-items {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include responsive("smartphone-landscape") {
+      gap: 0;
+    }
+    .experience-item {
+      flex: 0 0 48%;
+      max-width: 48%;
+
+      @include responsive("smartphone-landscape") {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+      .experience-info {
+        display: flex;
+        justify-content: space-between;
+        p {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          color: $dark;
+          opacity: 0;
+          animation: showText 0.5s 1s linear forwards;
+        }
+      }
+      .progress-line {
+        margin-top: 7px;
+        height: 10px;
+        width: 100%;
+        background-color: $progressBarBg;
+        position: relative;
+        transform: scaleX(0);
+        transform-origin: left;
+        animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+        border-radius: 50px;
+        span {
+          border-radius: 50px;
+          height: 100%;
+          position: absolute;
+          // transform: scaleX(0);
+          transform-origin: left;
+          background-color: $primary;
+        }
+        span.animate {
+          animation: animate 1.5s 0.5s cubic-bezier(1, 0, 0.5, 1) forwards;
+        }
+      }
+    }
+  }
+}
